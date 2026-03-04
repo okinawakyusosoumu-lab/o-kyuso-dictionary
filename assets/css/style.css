@@ -111,3 +111,54 @@ small{color:var(--muted)}
 }
 .related{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 .related a{border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:12px}
+/* === Search bar (terms list) === */
+.searchbar{
+  position: sticky;
+  top: 68px; /* ヘッダーの下に固定 */
+  z-index: 9;
+  margin: 12px 0 16px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius);
+}
+.searchlabel{
+  display:block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.searchinput{
+  width: 100%;
+  font-size: 16px; /* iPhoneで拡大されないサイズ */
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  outline: none;
+}
+.searchinput:focus{
+  border-color: var(--accent);
+}
+.searchresult{
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* === Mobile tap targets === */
+.related a{
+  display:inline-flex;
+  align-items:center;
+  min-height: 44px;  /* スマホの押しやすさ */
+  padding: 10px 12px;
+}
+
+/* === Mobile spacing tweaks === */
+@media (max-width: 520px){
+  .wrap{padding:16px}
+  .term-cover{min-height:140px}
+  .section{padding:14px}
+  .badge{font-size:13px}
+  .searchbar{top: 58px}
+}

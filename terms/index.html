@@ -22,7 +22,11 @@
 
 <main class="wrap">
   <p class="breadcrumb">用語 / 海上・コンテナ</p>
-
+<div class="searchbar">
+  <label class="searchlabel" for="termSearch">検索</label>
+  <input id="termSearch" class="searchinput" type="search" placeholder="例：リーチ / 20F / パレット / デバン" autocomplete="off">
+  <div id="searchResult" class="searchresult">全件表示中</div>
+</div>
   <div class="term-title">
     <h1>40Fコンテナ</h1>
     <div class="term-sub">40-foot Container</div>
@@ -53,8 +57,8 @@
   <section class="section">
     <h2>🔁 関連用語</h2>
     <div class="related">
-      <a href="20ft-container.html">20Fコンテナ</a>
-      <a href="reefer-container.html">リーファーコンテナ</a>
+      <a　class="term-link" href="20ft-container.html">20Fコンテナ</a>
+      <a class="term-link"　href="reefer-container.html">リーファーコンテナ</a>
     </div>
   </section>
 
@@ -62,6 +66,6 @@
     <small>補足：シャーシ（台車）とセットで覚えると現場で混乱しません。</small>
   </div>
 </main>
-
+<script src="../assets/js/terms-search.js"></script>
 </body>
 </html>
